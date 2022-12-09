@@ -19,3 +19,5 @@ class ETF:
         self.previousClose = yf.Ticker(ticker).info['previousClose']
         self.regularMarketOpen = yf.Ticker(ticker).info['regularMarketOpen']
         self.preMarketPercent = round(yf.Ticker(ticker).info['preMarketPrice'] / yf.Ticker(ticker).info['previousClose'],2)
+        
+        # test
