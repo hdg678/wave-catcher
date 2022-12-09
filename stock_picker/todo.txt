@@ -1,0 +1,11 @@
+-check for over shorted stocks and search for turn arounds
+-monitor the number of tweets on a specific stock ticker and look for surges
+-search for volumne trends and when markets are being maniuplated
+-get earnings reports and search for stocks that exceed earnings. (get earnings report time)
+
+# print(get_day_gainers())
+# print(get_day_losers())
+# print(get_day_most_active())
+# print(get_undervalued_large_caps())
+# tickers_nasdaq()
+# print(get_earnings_for_date('12/06/2022'))

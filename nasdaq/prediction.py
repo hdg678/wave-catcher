@@ -52,7 +52,7 @@ def recommend_nasdaq():
 def update_stats():
     with open("stats.json", "w") as outfile:
         json.dump(stats, outfile)
-        
+    return
 
 
 

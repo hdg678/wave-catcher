@@ -1,6 +1,6 @@
 import tweepy
 from textblob import TextBlob
-import requests
+# import requests
 import yfinance as yf
 import fear_and_greed
 

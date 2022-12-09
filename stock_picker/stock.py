@@ -46,6 +46,6 @@ class Stock:
 # print(msft.forwardPE)
 
 # print(get_earnings_for_date('12/09/2022'))
-orcl = Stock('orcl')
-print(orcl.trailingPE)
-print(orcl.forwardPE)
+# orcl = Stock('orcl')
+# print(orcl.trailingPE)
+# print(orcl.forwardPE)
