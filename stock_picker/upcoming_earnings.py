@@ -29,7 +29,7 @@ def extract_upcoming_tickers(day):
 		if (yf.Ticker(report['ticker']).info['exchange'] == 'NYQ') or (yf.Ticker(report['ticker']).info['exchange'] == 'NMS'):
 			temp.append(report['ticker'])
 		time.sleep(1)
-		# print(temp)
+		print(temp)
 	return [*set(temp)]
  
 
@@ -39,25 +39,20 @@ def update_stock_data(ticker_list):
 	for t in ticker_list:
 		try:
 			temp_stock = stock.Stock(t)
-			stock_data = {
-			'ticker': t,
-			'trailingPE': temp_stock.trailingPE,
-			'forwardPE': temp_stock.forwardPE 
-			}
+			stock_data = vars(temp_stock)
 			temp.append(stock_data)
 		except:
 			pass
 		time.sleep(1)
-		# print(temp)
+		print(temp)
 
 	with open("stats.json", "w") as outfile:
 		json.dump(temp, outfile)
 		return 0
 
 tickers = extract_upcoming_tickers(tomorrow)
+# tickers = ['avgo', 'nvda', 'aapl']
 update_stock_data(tickers)
-
-
 
 
 
